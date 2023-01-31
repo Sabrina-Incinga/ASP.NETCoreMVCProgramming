@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVCEmpleado</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+    <header class="header">
+       <h1>SISTEMA Empleado</h1>
+    </header>
+     @if (IsSectionDefined("Sidebar"))
+        {
+            @RenderSection("SideBar")
+        }else{
+            <aside class="aside">
+                <img src="./img/HappyFace.png" alt="Imagen cara feliz"/>
+                <h3>Bienvenido!</h3>
+            </aside>
+        }
+    <nav class="navBar">
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Empleado", "Index", "Empleado")
+    </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="border-top footer">
+        <h3>Info@Empleado.com</h3>
+    </footer>
+</body>
+</html>
