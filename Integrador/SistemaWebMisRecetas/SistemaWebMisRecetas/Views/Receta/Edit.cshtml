@@ -1,11 +1,13 @@
 ﻿@model SistemaWebMisRecetas.Models.Receta
+
 @{
-    ViewData["Title"] = "Crear receta";
+    ViewData["Title"] = "Editar receta";
 }
 
-<h2>Registrar Receta</h2>
 
-@using(Html.BeginForm("Create", "receta", FormMethod.Post, new { @class = "createForm" })){
+<h2>Modificar Receta</h2>
+
+@using(Html.BeginForm("Edit", "receta", FormMethod.Post, new { @class = "createForm" })){
     <p>
         @Html.LabelFor(model => model.Titulo)
         @Html.TextBoxFor(model => model.Titulo)
@@ -25,6 +27,16 @@
         @Html.LabelFor(model => model.Instrucciones)
         @Html.EditorFor(model => model.Instrucciones)
         @Html.ValidationMessageFor(model => model.Instrucciones)
+    </p>
+    <p class="hide">
+        @Html.LabelFor(model => model.AutorId)
+        @Html.TextBoxFor(model => model.AutorId)
+        @Html.ValidationMessageFor(model => model.AutorId)
+    </p>
+    <p class="hide">
+        @Html.LabelFor(model => model.Autor.Id)
+        @Html.TextBoxFor(model => model.Autor.Id)
+        @Html.ValidationMessageFor(model => model.Autor.Id)
     </p>
     <p>
         @Html.LabelFor(model => model.Autor.Nombre)
@@ -51,9 +63,7 @@
 
 @section SideBar{
     <aside class="aside">
-        <h4> @Html.ActionLink("Volver", "Index", "receta")</h4>
+        <h4> @Html.ActionLink("Cancelar", "Details", "Receta", new{id=@Model.Id})</h4>
 
     </aside>
 }
-
-

@@ -57,7 +57,7 @@ namespace SistemaWebMisRecetas.Controllers
         [HttpGet]
         public ActionResult Details(int id)
         {
-            Receta receta = context.Recetas.Include(x => x.Autor).FirstOrDefault();
+            Receta receta = GetReceta(id);
 
             if (receta == null)
             {
@@ -68,7 +68,7 @@ namespace SistemaWebMisRecetas.Controllers
 
         private Receta GetReceta(int id)
         {
-            return context.Recetas.Find(id);
+            return context.Recetas.Include(x => x.Autor).FirstOrDefault();
         }
 
         [HttpGet]
@@ -92,6 +92,7 @@ namespace SistemaWebMisRecetas.Controllers
             }
             else if (ModelState.IsValid)
             {
+                context.Entry(receta.Autor).State = EntityState.Modified;
                 context.Entry(receta).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 context.SaveChanges();
 

@@ -24,8 +24,14 @@
             @Html.DisplayFor(model => model.Autor.Nombre)
         </p>
     </article>
-    @Html.ActionLink("Volver", "Index", "receta")
 </section>
+@section SideBar{
+    <aside class="aside">
+        <h4>@Html.ActionLink("Editar Receta", "Edit", "Receta", new {id = @Model.Id})</h4>
+        <h4>@Html.ActionLink("Eliminar receta", "Delete", "Receta", new {id = @Model.Id})</h4>
+         <h4>@Html.ActionLink("Volver", "Index", "Receta")</h4>
 
+    </aside>
+}
 
 

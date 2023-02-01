@@ -9,13 +9,13 @@ namespace SistemaWebMisRecetas.Models
     public class Autor
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo requerido")]
         public string Nombre { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo requerido")]
         public string Apellido { get; set; }
         [ValidarEdad]
         public int Edad { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo requerido")]
         [RegularExpression("^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$", ErrorMessage ="Formato de email inválido")]
         public string Email { get; set; }
         public List<Receta> Recetas { get; set; }

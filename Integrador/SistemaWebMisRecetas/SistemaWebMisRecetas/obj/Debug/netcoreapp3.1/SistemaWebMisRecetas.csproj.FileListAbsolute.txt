@@ -149,3 +149,5 @@ H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\Integra
 H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\Integrador\SistemaWebMisRecetas\SistemaWebMisRecetas\obj\Debug\netcoreapp3.1\Razor\Views\Receta\Create.cshtml.g.cs
 H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\Integrador\SistemaWebMisRecetas\SistemaWebMisRecetas\obj\Debug\netcoreapp3.1\Razor\Views\Receta\GetByName.cshtml.g.cs
 H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\Integrador\SistemaWebMisRecetas\SistemaWebMisRecetas\obj\Debug\netcoreapp3.1\Razor\Views\Receta\Details.cshtml.g.cs
+H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\Integrador\SistemaWebMisRecetas\SistemaWebMisRecetas\obj\Debug\netcoreapp3.1\Razor\Views\Receta\Edit.cshtml.g.cs
+H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\Integrador\SistemaWebMisRecetas\SistemaWebMisRecetas\obj\Debug\netcoreapp3.1\Razor\Views\Receta\Delete.cshtml.g.cs

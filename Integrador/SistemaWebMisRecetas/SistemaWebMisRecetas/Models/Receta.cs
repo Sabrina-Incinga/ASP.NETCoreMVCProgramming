@@ -7,15 +7,15 @@ namespace SistemaWebMisRecetas.Models
     public class Receta
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage ="Campo requerido")]
         public string Titulo { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo requerido")]
         [RegularExpression("^[d][e][s][a][y][u][n][o]$", ErrorMessage ="Sólo se admite la categoría desayuno")]
         public string Categoria { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo requerido")]
         [DataType(DataType.MultilineText)]
         public string Ingredientes { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Campo requerido")]
         [DataType(DataType.MultilineText)]
         public string Instrucciones { get; set; }
         public int AutorId { get; set; }
