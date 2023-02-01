@@ -3,5 +3,10 @@
     ViewData["Title"] = "Index Home";
 }
 
-
+@section SideBar{
+    <aside class="aside">
+        <img src="./img/HappyFace.png" alt="Imagen cara feliz"/>
+        <h3>@ViewBag.Saludo <span>@ViewBag.Fecha</span></h3>
+    </aside>
+}
 

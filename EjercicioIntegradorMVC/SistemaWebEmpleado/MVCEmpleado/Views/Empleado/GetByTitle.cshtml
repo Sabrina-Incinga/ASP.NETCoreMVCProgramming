@@ -3,10 +3,11 @@
     ViewData["Title"] = "Empleados por título";
 }
 
-@Html.ActionLink("Nuevo", "Create", "Empleado")
 
 <h2>@Model.First().Titulo</h2>
-<table>
+@Html.ActionLink("Nuevo", "Create", "Empleado")
+
+<table class="listTable">
         <tr>
             <th>@Html.DisplayNameFor(model => model.Id)</th>
             <th>@Html.DisplayNameFor(model => model.Nombre)</th>
@@ -24,12 +25,15 @@
                 <td>@Html.DisplayFor(modelItem => item.Legajo)</td>
                 <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
                 <td>
-                    @Html.ActionLink("Detalle", "Details", "Empleado", new{id=item.Id})
-                    @Html.ActionLink("Eliminar", "Delete", "Empleado", new{id=item.Id})
+                    @Html.ActionLink("Detalle", "Details", "Empleado", new{id=item.Id})<br/>
+                    @Html.ActionLink("Eliminar", "Delete", "Empleado", new{id=item.Id})<br/>
+                    @Html.ActionLink("Editar", "Edit", "Empleado", new{id=item.Id})
                 </td>
             </tr>
         }
 </table>
+
+@Html.ActionLink("Volver", "Index", "Empleado")
 
 @section SideBar{
     <aside class="aside">

@@ -4,9 +4,10 @@
     ViewData["Title"] = "Index Empleados";
 }
 
+<h2>Todos los empleados</h2>
 @Html.ActionLink("Nuevo", "Create", "Empleado")
 
-<table>
+<table class="listTable">
         <tr>
             <th>@Html.DisplayNameFor(model => model.Id)</th>
             <th>@Html.DisplayNameFor(model => model.Nombre)</th>
@@ -24,10 +25,11 @@
                 <td>@Html.DisplayFor(modelItem => item.DNI)</td>
                 <td>@Html.DisplayFor(modelItem => item.Legajo)</td>
                 <td>@Html.DisplayFor(modelItem => item.FechaNacimiento)</td>
-                <td>@Html.DisplayFor(modelItem => item.Titulo)</td>
+                <td>@Html.ActionLink(item.Titulo, "GetByTitle", "Empleado", new{titulo=item.Titulo})</td>
                 <td>
-                    @Html.ActionLink("Detalle", "Details", "Empleado", new{id=item.Id})
-                    @Html.ActionLink("Eliminar", "Delete", "Empleado", new{id=item.Id})
+                    @Html.ActionLink("Detalle", "Details", "Empleado", new{id=item.Id})<br/>
+                    @Html.ActionLink("Eliminar", "Delete", "Empleado", new{id=item.Id})<br/>
+                    @Html.ActionLink("Editar", "Edit", "Empleado", new{id=item.Id})
                 </td>
             </tr>
         }

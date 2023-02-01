@@ -145,3 +145,6 @@ H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\Ejercic
 H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\EjercicioIntegradorMVC\SistemaWebEmpleado\MVCEmpleado\obj\Debug\netcoreapp3.1\Razor\Views\Empleado\Create.cshtml.g.cs
 H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\EjercicioIntegradorMVC\SistemaWebEmpleado\MVCEmpleado\obj\Debug\netcoreapp3.1\Razor\Views\Empleado\Index.cshtml.g.cs
 H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\EjercicioIntegradorMVC\SistemaWebEmpleado\MVCEmpleado\obj\Debug\netcoreapp3.1\Razor\Views\Empleado\GetByTitle.cshtml.g.cs
+H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\EjercicioIntegradorMVC\SistemaWebEmpleado\MVCEmpleado\obj\Debug\netcoreapp3.1\Razor\Views\Empleado\Details.cshtml.g.cs
+H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\EjercicioIntegradorMVC\SistemaWebEmpleado\MVCEmpleado\obj\Debug\netcoreapp3.1\Razor\Views\Empleado\Delete.cshtml.g.cs
+H:\Sabrina\Accenture\ASP.NETCoreMVCProgramming\ASP.NETCoreMVCProgramming\EjercicioIntegradorMVC\SistemaWebEmpleado\MVCEmpleado\obj\Debug\netcoreapp3.1\Razor\Views\Empleado\Edit.cshtml.g.cs

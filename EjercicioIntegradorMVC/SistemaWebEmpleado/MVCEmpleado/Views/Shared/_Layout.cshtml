@@ -16,8 +16,7 @@
             @RenderSection("SideBar")
         }else{
             <aside class="aside">
-                <img src="./img/HappyFace.png" alt="Imagen cara feliz"/>
-                <h3>Bienvenido!</h3>
+                
             </aside>
         }
     <nav class="navBar">
@@ -25,7 +24,7 @@
         @Html.ActionLink("Empleado", "Index", "Empleado")
     </nav>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 main">
             @RenderBody()
         </main>
     </div>

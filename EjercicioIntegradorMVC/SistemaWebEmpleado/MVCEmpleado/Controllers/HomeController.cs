@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace MVCEmpleado.Controllers
 {
@@ -6,6 +7,8 @@ namespace MVCEmpleado.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.Saludo = "Bienvenidos!";
+            ViewBag.Fecha = DateTime.Now.ToString();
             return View();
         }
     }

@@ -56,8 +56,8 @@ namespace MVCEmpleado.Controllers
         [HttpGet]
         public ActionResult Details(int id)
         {
-            Empleado empleado = context.Empleados.Find(id);
-            if(empleado == null)
+            Empleado empleado = GetById(id);
+            if (empleado == null)
             {
                 return NotFound();
             }
@@ -66,7 +66,7 @@ namespace MVCEmpleado.Controllers
         [HttpGet]
         public ActionResult Delete(int id)
         {
-            Empleado empleado = context.Empleados.Find(id);
+            Empleado empleado = GetById(id);
             if (empleado == null)
             {
                 return NotFound();
@@ -77,7 +77,7 @@ namespace MVCEmpleado.Controllers
         [ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Empleado empleado = context.Empleados.Find(id);
+            Empleado empleado = GetById(id);
             if (empleado == null)
             {
                 return NotFound();
@@ -87,6 +87,40 @@ namespace MVCEmpleado.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            Empleado empleado = GetById(id);
+            if (empleado == null)
+            {
+                return NotFound();
+            }
 
+            return View(empleado);
+        }
+        [HttpPost]
+        [ActionName("Edit")]
+        public ActionResult EditConfirmed(int id, Empleado empleado)
+        {
+            if(id != empleado.Id)
+            {
+                return BadRequest();
+            }
+            else if (ModelState.IsValid)
+            {
+                context.Entry(empleado).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                context.SaveChanges();
+
+                return RedirectToAction("Index");
+            }
+
+            return View(empleado);
+        }
+
+
+        private Empleado GetById(int id)
+        {
+            return context.Empleados.Find(id);
+        }
     }
 }
